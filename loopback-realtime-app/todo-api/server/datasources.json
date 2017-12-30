@@ -1,0 +1,15 @@
+{
+    "db": {
+        "name": "db",
+        "connector": "memory"
+    },
+    "hackathon_social_intranet": {
+        "host": "localhost",
+        "port": 3306,
+        "database": "hackathon_social_intranet",
+        "password": "",
+        "name": "hackathon_social_intranet",
+        "user": "root",
+        "connector": "mysql"
+    }
+}

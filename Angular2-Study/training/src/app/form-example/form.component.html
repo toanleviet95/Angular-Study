@@ -1,0 +1,26 @@
+Form Example:<br/>
+<form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+  <input name="email"
+        ngModel
+         #txtEmail="ngModel"
+         placeholder="Email"
+        required email/>
+        <p *ngIf="txtEmail.touched && myForm.controls.email?.errors?.required">Email is required</p>
+        <p *ngIf="txtEmail.touched && myForm.controls.email?.errors?.email">Email is not valid</p>
+  <input name="password"
+        ngModel
+         #txtPassword="ngModel"
+         placeholder="Password"
+         type="text" required minlength="6" pattern="[a-z]*" />
+         <br/>
+  <div ngModelGroup="subjects">
+    <label><input type="checkbox" [ngModel]="false" name="NodeJS" /> NodeJS</label>
+    <label><input type="checkbox" [ngModel]="false" name="Angular" /> Angular</label>
+    <label><input type="checkbox" [ngModel]="false" name="ReactJS" /> ReactJS</label>
+  </div>
+        <br/>
+         <button [disabled]="myForm.invalid" >Submit</button>
+</form>
+<p>{{ txtEmail.errors | json }}</p>
+<p>{{ txtPassword.errors | json }}</p>
+<p>{{ myForm.value | json }}</p>

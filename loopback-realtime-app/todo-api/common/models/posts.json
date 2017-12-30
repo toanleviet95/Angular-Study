@@ -1,0 +1,40 @@
+{
+    "name": "posts",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "options": {
+        "validateUpsert": true
+    },
+    "properties": {
+        "id": {
+            "type": "number"
+        },
+        "account_id": {
+            "type": "number",
+            "required": true
+        },
+        "content": {
+            "type": "string",
+            "required": true
+        },
+        "likes": {
+            "type": "number"
+        },
+        "dislikes": {
+            "type": "number"
+        },
+        "comments": {
+            "type": "number"
+        },
+        "created_at": {
+            "type": "string"
+        },
+        "updated_at": {
+            "type": "string"
+        }
+    },
+    "validations": [],
+    "relations": {},
+    "acls": [],
+    "methods": {}
+}

@@ -1,0 +1,12 @@
+{
+  "ng2-select2": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "",
+    "database": "ng2-select2",
+    "password": "",
+    "name": "ng2-select2",
+    "user": "root",
+    "connector": "mysql"
+  }
+}

@@ -1,0 +1,20 @@
+Reactive Form Example:<br/>
+<form (ngSubmit)="onSubmit()" [formGroup]="formReactive">
+  <input formControlName="email"
+        placeholder="Email"
+  />
+  <p *ngIf="formReactive.get('email').invalid && formReactive.get('email').touched">Email is required</p>
+  <input formControlName="password"
+         placeholder="Password"
+         type="password"/>
+         <br/>
+         <div formGroupName="subjects">
+          <label><input type="checkbox" formControlName="nodejs" /> NodeJS</label>
+          <label><input type="checkbox" formControlName="angular" /> Angular</label>
+          <label><input type="checkbox" formControlName="reactjs" /> ReactJS</label>
+        </div>
+        <br/>
+         <button [disabled]="formReactive.invalid">Submit</button>
+</form>
+<p>{{ formReactive.value | json }}</p>
+<p>{{ formReactive.controls.email.errors | json }}</p>

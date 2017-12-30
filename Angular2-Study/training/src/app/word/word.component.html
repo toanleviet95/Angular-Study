@@ -1,0 +1,13 @@
+Event binding:
+<input type="text" (keyup)="show($event)">
+<br/><br/>
+Two way binding:
+<input type="text" [(ngModel)]="name" #txtUsername>
+<!--<h3 [style.color]="name.length % 2 === 0 ? 'red' : 'black'">Hello {{ name }}</h3>-->
+<h3 [ngStyle]="name.length % 2 === 0 ? evenStyle : oddStyle">Hello {{name}}</h3>
+<!--<div [class]="isHighLight ? 'circle' : 'square'"></div>
+<div [class.circle]="isHighLight" [class.square]="!isHighLight"></div>-->
+<div [ngClass]="currentStyle"></div>
+<code>{{ txtUsername.value | json }}</code><br/>
+<p *ngIf="isShow">Show me</p>
+<button (click)="isShow = !isShow">Show me</button>
