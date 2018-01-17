@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ReactiveFormComponent } from './reactive-form.component';
+import { DynamicFormComponent } from './dynamic-form.component';
 
 const routes: Routes = [
     {
         path: '',
-        component: ReactiveFormComponent
+        component: DynamicFormComponent
     }
 ];
 
@@ -15,4 +15,4 @@ const routes: Routes = [
     exports: [RouterModule]
 })
 
-export class ReactFormRoutingModule {}
+export class DynamicFormRoutingModule {}
