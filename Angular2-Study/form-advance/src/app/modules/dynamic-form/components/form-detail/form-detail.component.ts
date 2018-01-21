@@ -5,7 +5,7 @@ import { QuestionBase } from '../../../../models/question-base';
 
 @Component({
   selector: 'app-question',
-  templateUrl: './dynamic-form-question.component.html'
+  templateUrl: './form-detail.component.html'
 })
 export class FormDetailComponent {
   @Input() question: QuestionBase<any>;

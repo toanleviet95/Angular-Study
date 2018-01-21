@@ -9,6 +9,7 @@ import { FormDetailComponent } from './components/form-detail/form-detail.compon
 import { FormListComponent } from './components/form-list/form-list.component';
 
 import { QuestionControlService } from './services/question-control.service';
+import { QuestionService } from './services/question.service';
 @NgModule({
     imports: [
         CommonModule,
@@ -21,7 +22,7 @@ import { QuestionControlService } from './services/question-control.service';
         FormDetailComponent,
         FormListComponent
     ],
-    providers: [QuestionControlService]
+    providers: [QuestionControlService, QuestionService]
 })
 
 export class DynamicFormModule { }
